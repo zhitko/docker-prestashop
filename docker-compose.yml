@@ -4,8 +4,6 @@ web:
     - "8000:80"
   links:
     - db
-  volumes:
-    - ./php/code:/var/www/site
 db:
   image: orchardup/mysql
   environment:
