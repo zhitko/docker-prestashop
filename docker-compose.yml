@@ -1,0 +1,14 @@
+web:
+  build: ./php
+  ports:
+    - "8000:80"
+  links:
+    - db
+  volumes:
+    - ./php/code:/var/www/site
+db:
+  image: orchardup/mysql
+  environment:
+    MYSQL_USER: mysql
+    MYSQL_PASSWORD: mysql
+    MYSQL_DATABASE: prestashop
